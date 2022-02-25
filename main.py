@@ -5,7 +5,6 @@ import importlib
 import time
 
 from config import parameters as pm
-# from domain_parser import bestbuy as bb
 
 
 # SETUP GLOBAL VARIABLES
@@ -43,9 +42,7 @@ if __name__ == '__main__':
     else:
         # TODO: based upon text messaging selection by user
         #  change "all" to "None" for NOT reading twilio data
-        from config import parameters as pm
         param_obj = pm.config_read(filename, tld, 'all')
         print('Found config file, reading parameters...')
         m_parse = importlib.import_module('domain_parser' + '.' + tld)
-        bb = m_parse.BestBuy(url, **param_obj).start(600)
-
+        bb = m_parse.BestBuy(url, **param_obj).start(120)
