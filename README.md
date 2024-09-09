@@ -1,4 +1,4 @@
-# PurchaserBot
+# SmartCart
 Purchaser bot for hard to find items
 
 Current version supports only bestbuy
